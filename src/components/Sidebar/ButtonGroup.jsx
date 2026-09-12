@@ -10,22 +10,22 @@ function ButtonGroup() {
 
     const buttons = [
         {
-            id: "01a09422-bbec-76db-885c-eb595ab9845a",
+            id: "complete",
             content: "mark all as complete",
             clickHandler: clickHandlers.markAllAsComplete,
         },
         {
-            id: "01a09422-d4a3-778d-a608-df6cb392cac7",
+            id: "incomplete",
             content: "mark all as incomplete",
             clickHandler: clickHandlers.markAllAsIncomplete,
         },
         {
-            id: "01a09422-e55b-773a-b399-312b28803a77",
+            id: "reset",
             content: "reset to initial",
             clickHandler: clickHandlers.resetToInitial,
         },
         {
-            id: "01a09422-f290-728e-9c5f-8d079353966e",
+            id: "remove-all",
             content: "remove all items",
             clickHandler: clickHandlers.removeAllItems,
         },
