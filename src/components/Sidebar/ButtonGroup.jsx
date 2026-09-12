@@ -1,33 +1,26 @@
 import Button from "./Button";
 
-function ButtonGroup() {
-    const clickHandlers = {
-        markAllAsComplete: () => {},
-        markAllAsIncomplete: () => {},
-        resetToInitial: () => {},
-        removeAllItems: () => {},
-    };
-
+function ButtonGroup({ operations }) {
     const buttons = [
         {
             id: "complete",
             content: "mark all as complete",
-            clickHandler: clickHandlers.markAllAsComplete,
+            clickHandler: operations.markAllAsComplete,
         },
         {
             id: "incomplete",
             content: "mark all as incomplete",
-            clickHandler: clickHandlers.markAllAsIncomplete,
+            clickHandler: operations.markAllAsIncomplete,
         },
         {
             id: "reset",
             content: "reset to initial",
-            clickHandler: clickHandlers.resetToInitial,
+            clickHandler: operations.resetToInitial,
         },
         {
             id: "remove-all",
             content: "remove all items",
-            clickHandler: clickHandlers.removeAllItems,
+            clickHandler: operations.clearAll,
         },
     ];
 

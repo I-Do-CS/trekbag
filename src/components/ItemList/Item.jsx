@@ -1,18 +1,18 @@
-function Item({ item, handleTogglePacked, handleDeleteItem }) {
+function Item({ item, togglePacked, deleteItem }) {
+    const handleInputChange = () => {
+        togglePacked(item.id);
+    };
+    const handleButtonClick = () => {
+        deleteItem(item.id);
+    };
+
     return (
         <li className="item">
             <label>
-                <input
-                    type="checkbox"
-                    checked={item.packed}
-                    onChange={() => handleTogglePacked(item.id)}
-                />
-                {item.name}
+                <input type="checkbox" checked={item.packed} onChange={handleInputChange} />
+                {item.text}
             </label>
-            <button
-                onClick={() => handleDeleteItem(item.id)}
-                aria-label={`Delete ${item.name} from list`}
-            >
+            <button onClick={handleButtonClick} aria-label={`Delete ${item.name} from list`}>
                 ❌
             </button>
         </li>
