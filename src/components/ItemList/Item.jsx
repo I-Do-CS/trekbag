@@ -1,9 +1,9 @@
-function Item({ item, togglePacked, deleteItem }) {
+function Item({ item, operations }) {
     const handleInputChange = () => {
-        togglePacked(item.id);
+        operations.togglePacked(item.id);
     };
     const handleButtonClick = () => {
-        deleteItem(item.id);
+        operations.deleteItem(item.id);
     };
 
     return (
