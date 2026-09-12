@@ -4,11 +4,13 @@ function App() {
     return (
         <>
             <BackgroundHeading />
+
             <main>
                 <Header />
                 <ItemList />
                 <Sidebar />
             </main>
+
             <Footer />
         </>
     );

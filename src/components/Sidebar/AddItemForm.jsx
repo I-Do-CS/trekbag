@@ -1,5 +1,13 @@
+import Button from "./Button";
+
 function AddItemForm() {
-    return <div>AddItemForm</div>;
+    return (
+        <form>
+            <h2>Add an item</h2>
+            <input type="text" />
+            <Button>add to list</Button>
+        </form>
+    );
 }
 
 export default AddItemForm;

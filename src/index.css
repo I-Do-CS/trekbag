@@ -230,21 +230,18 @@ form > input::placeholder {
     border-radius: 5px;
     background-color: #473a2b;
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.2s;
+    text-transform: uppercase;
 }
 
 .btn:hover {
     background-color: #322618;
-}
-
-.btn--secondary {
-    opacity: 0.85;
-    font-size: 14px;
 }
 
 .button-group {
@@ -252,6 +249,11 @@ form > input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.button-group > button {
+    font-size: 13px;
+    opacity: 0.85;
 }
 
 .sorting {
