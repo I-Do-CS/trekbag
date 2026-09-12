@@ -1,4 +1,4 @@
-import logo from "../assets/images/dots.png";
+import logo from "../../assets/images/dots.png";
 
 function Logo() {
     return <img src={logo} alt="Logo" />;
