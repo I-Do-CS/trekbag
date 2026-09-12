@@ -1,4 +1,4 @@
-export default function Footer() {
+function Footer() {
     return (
         <footer>
             <small>&copy; 2077. Copyright by NightCity.</small>
@@ -8,3 +8,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default Footer;

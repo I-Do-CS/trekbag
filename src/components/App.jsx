@@ -4,7 +4,7 @@ import Header from "./Header";
 import ItemList from "./ItemList";
 import Sidebar from "./Sidebar";
 
-export default function App() {
+function App() {
     return (
         <>
             <BackgroundHeading />
@@ -17,3 +17,5 @@ export default function App() {
         </>
     );
 }
+
+export default App;

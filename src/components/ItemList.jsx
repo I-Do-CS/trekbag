@@ -1,3 +1,5 @@
-export default function ItemList() {
+function ItemList() {
     return <div>ItemList</div>;
 }
+
+export default ItemList;
