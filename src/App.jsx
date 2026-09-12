@@ -6,21 +6,21 @@ function App() {
     const [items, setItems] = useState(SEED_ITEMS);
     const operations = {
         addItem: (text) => {
-            setItems([...items, { id: `item-${Date.now()}`, text, packed: false }]);
+            setItems((prev) => [...prev, { id: `item-${Date.now()}`, text, packed: false }]);
         },
         deleteItem: (id) => {
-            setItems(items.filter((item) => item.id !== id));
+            setItems((prev) => prev.filter((item) => item.id !== id));
         },
         togglePacked: (id) => {
-            setItems(
-                items.map((item) => (item.id === id ? { ...item, packed: !item.packed } : item)),
+            setItems((prev) =>
+                prev.map((item) => (item.id === id ? { ...item, packed: !item.packed } : item)),
             );
         },
         markAllAsComplete: () => {
-            setItems(items.map((item) => ({ ...item, packed: true })));
+            setItems((prev) => prev.map((item) => ({ ...item, packed: true })));
         },
         markAllAsIncomplete: () => {
-            setItems(items.map((item) => ({ ...item, packed: false })));
+            setItems((prev) => prev.map((item) => ({ ...item, packed: false })));
         },
         resetToInitial: () => {
             setItems(() => [...SEED_ITEMS]);
