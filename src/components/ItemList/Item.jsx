@@ -1,9 +1,15 @@
-function Item({ item, operations }) {
+import useItemsStore from "../../stores/itemsStore";
+
+function Item({ item }) {
+    const { togglePacked, deleteItem } = useItemsStore((state) => ({
+        togglePacked: state.togglePacked,
+        deleteItem: state.deleteItem,
+    }));
     const handleInputChange = () => {
-        operations.togglePacked(item.id);
+        togglePacked(item.id);
     };
     const handleButtonClick = () => {
-        operations.deleteItem(item.id);
+        deleteItem(item.id);
     };
 
     return (

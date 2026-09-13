@@ -1,5 +1,4 @@
 import { BackgroundHeading, Footer, Header, ItemList, Sidebar } from "./components";
-import ItemsContextProvider from "./contexts/ItemsContextProvider";
 
 function App() {
     return (
@@ -7,11 +6,9 @@ function App() {
             <BackgroundHeading />
 
             <main>
-                <ItemsContextProvider>
-                    <Header />
-                    <ItemList />
-                    <Sidebar />
-                </ItemsContextProvider>
+                <Header />
+                <ItemList />
+                <Sidebar />
             </main>
 
             <Footer />

@@ -1,11 +1,20 @@
-import useItemsContext from "../../hooks/useItemsContext";
+import useItemsStore from "../../stores/itemsStore";
 
 function Counter() {
-    const { stats } = useItemsContext();
+    const { packed, total } = useItemsStore((state) =>
+        state.items.reduce(
+            (acc, item) => {
+                acc.total++;
+                if (item.packed) acc.packed++;
+                return acc;
+            },
+            { packed: 0, total: 0 },
+        ),
+    );
 
     return (
         <div>
-            <b>{stats.packed}</b> / {stats.total} items packed
+            <b>{packed}</b> / {total} items packed
         </div>
     );
 }

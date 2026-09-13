@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 import Button from "./Button";
-import useItemsContext from "../../hooks/useItemsContext";
+import useItemsStore from "../../stores/itemsStore";
 
 function AddItemForm() {
-    const { operations } = useItemsContext();
+    const addItem = useItemsStore((state) => state.addItem);
     const [itemText, setItemText] = useState("");
     const inputRef = useRef(null);
 
@@ -20,7 +20,7 @@ function AddItemForm() {
             return;
         }
 
-        operations.addItem(itemText);
+        addItem(itemText);
         setItemText(() => "");
         inputRef.current.focus();
     };
