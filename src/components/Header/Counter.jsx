@@ -1,7 +1,7 @@
-function Counter() {
+function Counter({ stats }) {
     return (
         <div>
-            <b>1</b> / 3 items packed
+            <b>{stats.packed}</b> / {stats.total} items packed
         </div>
     );
 }

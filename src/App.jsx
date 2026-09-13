@@ -3,7 +3,11 @@ import { BackgroundHeading, Footer, Header, ItemList, Sidebar } from "./componen
 import { SEED_ITEMS } from "./constants";
 
 function App() {
-    const [items, setItems] = useState(SEED_ITEMS);
+    const [items, setItems] = useState(() => [...SEED_ITEMS]);
+    const stats = {
+        total: items.length,
+        packed: items.filter((item) => item.packed).length,
+    };
     const operations = {
         addItem: (text) => {
             setItems((prev) => [...prev, { id: `item-${Date.now()}`, text, packed: false }]);
@@ -35,7 +39,7 @@ function App() {
             <BackgroundHeading />
 
             <main>
-                <Header />
+                <Header stats={stats} />
                 <ItemList items={items} operations={operations} />
                 <Sidebar operations={operations} />
             </main>
