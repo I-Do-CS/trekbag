@@ -2,9 +2,11 @@ import Select from "react-select";
 import EmptyView from "./EmptyView";
 import Item from "./Item";
 import { SORT_OPTIONS } from "../../constants";
-import { useMemo, useState } from "react";
+import { useContext, useMemo, useState } from "react";
+import { ItemsContext } from "../../contexts/ItemsContext";
 
-function ItemList({ items, operations }) {
+function ItemList() {
+    const { items, operations } = useContext(ItemsContext);
     const itemsIsEmpty = items.length === 0;
     const sortOptions = [...SORT_OPTIONS];
     const [sortBy, setSortBy] = useState(sortOptions[0].value);

@@ -1,7 +1,9 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import Button from "./Button";
+import { ItemsContext } from "../../contexts/ItemsContext";
 
-function AddItemForm({ addItem }) {
+function AddItemForm() {
+    const { operations } = useContext(ItemsContext);
     const [itemText, setItemText] = useState("");
     const inputRef = useRef(null);
 
@@ -18,7 +20,7 @@ function AddItemForm({ addItem }) {
             return;
         }
 
-        addItem(itemText);
+        operations.addItem(itemText);
         setItemText(() => "");
         inputRef.current.focus();
     };

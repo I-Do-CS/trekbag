@@ -1,11 +1,11 @@
 import Counter from "./Counter";
 import Logo from "./Logo";
 
-function Header({ stats }) {
+function Header() {
     return (
         <header>
             <Logo />
-            <Counter stats={stats} />
+            <Counter />
         </header>
     );
 }

@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import Button from "./Button";
+import { ItemsContext } from "../../contexts/ItemsContext";
 
-function ButtonGroup({ operations }) {
+function ButtonGroup() {
+    const { operations } = useContext(ItemsContext);
     const buttons = [
         {
             id: "complete",

@@ -1,11 +1,11 @@
 import AddItemForm from "./AddItemForm";
 import ButtonGroup from "./ButtonGroup";
 
-function Sidebar({ operations }) {
+function Sidebar() {
     return (
         <aside className="sidebar">
-            <AddItemForm addItem={operations.addItem} />
-            <ButtonGroup operations={operations} />
+            <AddItemForm />
+            <ButtonGroup />
         </aside>
     );
 }
