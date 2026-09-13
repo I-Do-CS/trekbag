@@ -1,9 +1,8 @@
-import { useContext } from "react";
+import useItemsContext from "../../hooks/useItemsContext";
 import Button from "./Button";
-import { ItemsContext } from "../../contexts/ItemsContext";
 
 function ButtonGroup() {
-    const { operations } = useContext(ItemsContext);
+    const { operations } = useItemsContext();
     const buttons = [
         {
             id: "complete",

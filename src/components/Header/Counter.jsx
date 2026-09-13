@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { ItemsContext } from "../../contexts/ItemsContext";
+import useItemsContext from "../../hooks/useItemsContext";
 
 function Counter() {
-    const { stats } = useContext(ItemsContext);
+    const { stats } = useItemsContext();
 
     return (
         <div>
