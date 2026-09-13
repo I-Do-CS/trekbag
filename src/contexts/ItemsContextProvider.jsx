@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SEED_ITEMS } from "../constants";
-import { ItemsContext } from "./ItemsContext";
+import ItemsContext from "./ItemsContext";
 
 function ItemsContextProvider({ children }) {
     // Lazy-load items from local storage or use the seed items if none exist.
@@ -42,7 +42,7 @@ function ItemsContextProvider({ children }) {
     useEffect(() => {
         localStorage.setItem("items", JSON.stringify(items));
     }, [items]);
- 
+
     return (
         <ItemsContext.Provider value={{ items, stats, operations }}>
             {children}

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ItemsContext from "./ItemsContext";
+import ItemsContext from "../contexts/ItemsContext";
 
 function useItemsContext() {
     const context = useContext(ItemsContext);
